@@ -1,0 +1,6 @@
+Patient=patient
+Reception=reception
+Doctor=doctor
+Hospital=hospital
+Add\ Patient=patient?new
+Add\ Doctor=doctor?new
