@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
+import com.theka.model.FeedBack;
 import com.theka.model.Person;
 
 @Repository
@@ -62,6 +63,14 @@ public class PersonDAOImpl implements PersonDAO {
 			session.delete(p);
 		}
 		logger.info("Person deleted successfully, person details="+p);
+	}
+
+	@Override
+	public void addFeedBack(FeedBack feedBack) {
+		Session session = this.sessionFactory.getCurrentSession();
+		session.persist(feedBack);
+		logger.info("Person saved successfully, feed back detail Details="+feedBack);
+		
 	}
 
 }

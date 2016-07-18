@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.theka.dao.PersonDAO;
+import com.theka.model.FeedBack;
 import com.theka.model.Person;
 
 @Service
@@ -45,6 +46,12 @@ public class PersonServiceImpl implements PersonService {
 	@Transactional
 	public void removePerson(int id) {
 		this.personDAO.removePerson(id);
+	}
+
+	@Override
+	@Transactional
+	public void addfeedback(FeedBack p) {
+		this.personDAO.addFeedBack(p);		
 	}
 
 }
