@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 
@@ -228,6 +230,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="col-md-5">
 				<h3>Project Three-About</h3>
 				<h4>Subheading</h4>
@@ -258,8 +261,8 @@
 				</div>
 			</div>
 			<div class="col-md-5">
-				<h3>Project Three-About</h3>
-				<h4>Subheading</h4>
+				<h3>Piyakad Bhaiya</h3>
+				<h4>Palan Data</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 					Omnis, temporibus, dolores, at, praesentium ut unde repudiandae
 					voluptatum sit ab debitis suscipit fugiat natus velit excepturi
@@ -287,7 +290,7 @@
 			</div>
 			<div class="col-md-5 stars">
 				<h3>Feed Back</h3>
-				<form action="">
+				<form:form action="">
 					<input class="star star-5" id="star-5" type="radio" name="star" />
 					<label class="star star-5" for="star-5"></label>
 					<input class="star star-4" id="star-4" type="radio" name="star" /> 
@@ -303,7 +306,7 @@
 				<textarea rows="" cols=""></textarea>
 			</div>
 					
-				</form>
+				</form:form>
 				<a class="btn btn-primary" href="#">Submit FeedBack <span
 					class="glyphicon glyphicon-chevron-right"></span></a>
 			</div>
@@ -325,7 +328,7 @@
 					</div>
 				</div>
 			</div>
-			<form id="contact-form" th:object="/career" method="post"
+			<form:form id="contact-form" th:object="/career" method="post"
 				th:action="@{/caree}">
 
 				<div class="col-md-5">
@@ -356,7 +359,7 @@
 		</div>
 
 
-		</form>
+		</form:form>
 	</div>
 	<!-- /.row -->
 
@@ -401,15 +404,17 @@
 		</div>
 		<div class="col-md-5">
 
-			<form id="contact-form" th:object="/career" method="post">
+			<form:form id="contact-form" th:object="/career" method="post">
 				<h3>Food Experience</h3>
 
 
 				<h2>
 					Want to say more
-					</h4>
+					</h2>
 					<textarea name="message" id="message" class="form-control" rows="9"
 						cols="25" required="required" placeholder="Message"></textarea>
+						</form:form>
+						
 		</div>
 	</div>
 	<!-- /.row -->
