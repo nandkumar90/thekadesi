@@ -77,26 +77,38 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="intro-message">
-						<!-- <h1>Landing Page</h1>
-                        <h3>A Template by Start Bootstrap</h3>
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                            </li>
-                        </ul>-->
+						<div class="col-md-8 column ui-sortable">1111</div>
+						<div class="col-md-4 column ui-sortable">
+							<div class="list-group">
+								    <a href="#" class="list-group-item active">
+									<h4 class="list-group-item-heading">Matar Paneer </h4>
+									<p class="list-group-item-text">Matar Paneer Description</p>
+									<h4 class="list-group-item-heading">Matar Paneer </h4>
+									<p class="list-group-item-text">Matar Paneer Description</p>
+									<h4 class="list-group-item-heading">Matar Paneer </h4>
+									<p class="list-group-item-text">Matar Paneer Description</p>
+									<h4 class="list-group-item-heading">Matar Paneer </h4>
+									<p class="list-group-item-text">Matar Paneer Description</p>
+									<h4 class="list-group-item-heading">Matar Paneer </h4>
+									<p class="list-group-item-text">Matar Paneer Description</p>
+									<h4 class="list-group-item-heading">Matar Paneer </h4>
+									<p class="list-group-item-text">Matar Paneer Description</p>
+									<h4 class="list-group-item-heading">Matar Paneer </h4>
+									<p class="list-group-item-text">Matar Paneer Description</p>
+									<h4 class="list-group-item-heading">Matar Paneer </h4>
+									<p class="list-group-item-text">Matar Paneer Description</p>
+									<h4 class="list-group-item-heading">Matar Paneer </h4>
+									<p class="list-group-item-text">Matar Paneer Description</p>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-
 		</div>
-		<!-- /.container -->
+
+	</div>
+	<!-- /.container -->
 
 	</div>
 
@@ -230,7 +242,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="col-md-5">
 				<h3>Project Three-About</h3>
 				<h4>Subheading</h4>
@@ -293,19 +305,19 @@
 				<form:form action="">
 					<input class="star star-5" id="star-5" type="radio" name="star" />
 					<label class="star star-5" for="star-5"></label>
-					<input class="star star-4" id="star-4" type="radio" name="star" /> 
-					<label	class="star star-4" for="star-4"></label> 
-					<input class="star star-3" id="star-3" type="radio" name="star" /> 
+					<input class="star star-4" id="star-4" type="radio" name="star" />
+					<label class="star star-4" for="star-4"></label>
+					<input class="star star-3" id="star-3" type="radio" name="star" />
 					<label class="star star-3" for="star-3"></label>
-				    <input class="star star-2" id="star-2" type="radio" name="star" /> 
-				    <label class="star star-2" for="star-2"></label> 
-				    <input class="star star-1" id="star-1" type="radio" name="star" /> 
-				    <label class="star star-1" for="star-1"></label>
-				<div class="col-md-5">
-				<h4>Write Us More</h4>
-				<textarea rows="" cols=""></textarea>
-			</div>
-					
+					<input class="star star-2" id="star-2" type="radio" name="star" />
+					<label class="star star-2" for="star-2"></label>
+					<input class="star star-1" id="star-1" type="radio" name="star" />
+					<label class="star star-1" for="star-1"></label>
+					<div class="col-md-5">
+						<h4>Write Us More</h4>
+						<textarea rows="" cols=""></textarea>
+					</div>
+
 				</form:form>
 				<a class="btn btn-primary" href="#">Submit FeedBack <span
 					class="glyphicon glyphicon-chevron-right"></span></a>
@@ -328,8 +340,7 @@
 					</div>
 				</div>
 			</div>
-			<form:form id="contact-form" th:object="/career" method="post"
-				th:action="@{/caree}">
+			<form:form id="contact-form" method="post" action="/caree">
 
 				<div class="col-md-5">
 					<h3>Email Address</h3>
@@ -404,17 +415,15 @@
 		</div>
 		<div class="col-md-5">
 
-			<form:form id="contact-form" th:object="/career" method="post">
+			<form:form id="contact-form" action="/career" method="post">
 				<h3>Food Experience</h3>
 
 
-				<h2>
-					Want to say more
-					</h2>
-					<textarea name="message" id="message" class="form-control" rows="9"
-						cols="25" required="required" placeholder="Message"></textarea>
-						</form:form>
-						
+				<h2>Want to say more</h2>
+				<textarea name="message" id="message" class="form-control" rows="9"
+					cols="25" required="required" placeholder="Message"></textarea>
+			</form:form>
+
 		</div>
 	</div>
 	<!-- /.row -->
