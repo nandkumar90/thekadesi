@@ -61,16 +61,16 @@
 				<li><a href="#about">About</a></li>
 				<li><a href="#menu">Today's menu</a></li>
 				<li><a href="#recepie">Suggest a Dish</a></li>
-				<li><a href="#chefCorner">Chef's Corner</a></li>
+				<li><a href="#chefs">Chef's Corner</a></li>
 				<li><a href="#feedback">FeedBack</a></li>
-				<li><a href="#career">Career</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<li><a href="#career">Contact</a></li>
 
 			</ul>
 		</div>
 		<!-- /.navbar-collapse -->
 	</div>
 	<!-- /.container --> </nav>
+		<a name="menu"></a>
 	<div class="intro-header">
 		<div class="container">
 
@@ -78,7 +78,7 @@
 				<div class="col-lg-12">
 					<div class="intro-message">
 						<div class="col-md-8 column ui-sortable">1111</div>
-						<div class="col-md-4 column ui-sortable">
+						<div class="col-md-4 column ui-sortable">Today Menu
 							<div class="list-group">
 								    <a href="#" class="list-group-item active">
 									<h4 class="list-group-item-heading">Matar Paneer </h4>
@@ -130,25 +130,24 @@
 		<div class="row" style="padding-top: 100px">
 			<div class="col-md-7">
 				<div class="thumbnail">
-					<img src="<%=request.getContextPath()%>/resources/img/candle.jpg"
+					<img src="<%=request.getContextPath()%>/resources/img/manoj.jpg"
 						alt="..." />
 					<div class="caption post-content">
 
-						<h3>Robots!</h3>
-						<p>Lorem ipsum dolor sit amet</p>
+						<p>Food is Eagiest Way To Get High</p>
 
 					</div>
 				</div>
 			</div>
 			<div class="col-md-5">
-				<h3>Project Three-About</h3>
-				<h4>Subheading</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					Omnis, temporibus, dolores, at, praesentium ut unde repudiandae
-					voluptatum sit ab debitis suscipit fugiat natus velit excepturi
-					amet commodi deleniti alias possimus!</p>
-				<a class="btn btn-primary" href="#">View Project <span
-					class="glyphicon glyphicon-chevron-right"></span></a>
+				<h3>WELCOME TO THEKA DESI KHANA</h3>
+				<h4>Manoj Agrawal</h4>
+				<p>Hamara Theka: Started with a vision to overload tech-savvy, workaholic & underweight stomachs and growing on to bring tsunami of flavours in your mouth. The main aim always being around the glamour of desi khana, though not home made but always home like. With careful selection of fresh ingredients, an exquisite spread of menu items and a magical chef, we offer you to let the post-food burp echo in the ambience, saying, "Yaar, ghar di yaad dila dee da"
+
+                   Hamare Adarsh: Anyone can make you high on alcohol, we intend to get you high on food. "One way, to, rule them all". What is great in our team, is that everyone is crazy about food, which makes us our best critics. All in all, "khana aisa, ki jise bhagwaan ke liye bhi na chodein".
+
+                   Hum Sab:</p>
+				
 			</div>
 		</div>
 		<!-- /.row -->
@@ -156,134 +155,42 @@
 		<hr>
 
 
-		<a name="menu"></a>
-		<!-- Project Two -->
-		<div class="row">
-			<div class="col-md-7">
-				<a href="#"> <img class="img-responsive"
-					src="<%=request.getContextPath()%>/resources/img/Maachi.jpg" alt="">
-				</a>
-			</div>
-			<div class="col-md-5">
-				<h3>Project Two</h3>
-				<h4>Subheading</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut,
-					odit velit cumque vero doloremque repellendus distinctio maiores
-					rem expedita a nam vitae modi quidem similique ducimus! Velit, esse
-					totam tempore.</p>
-				<a class="btn btn-primary" href="#">View Project <span
-					class="glyphicon glyphicon-chevron-right"></span></a>
-			</div>
-		</div>
+		
 
-		<a name="about"></a>
-		<!-- Project Two -->
-		<div class="row">
-			<div class="col-md-7">
-				<a href="#"> <img class="img-responsive"
-					src="<%=request.getContextPath()%>/resources/img/Maachi.jpg" alt="">
-				</a>
-			</div>
-			<div class="col-md-5">
-				<h3>About</h3>
-				<h4>About</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut,
-					odit velit cumque vero doloremque repellendus distinctio maiores
-					rem expedita a nam vitae modi quidem similique ducimus! Velit, esse
-					totam tempore.</p>
-				<a class="btn btn-primary" href="#">View Project <span
-					class="glyphicon glyphicon-chevron-right"></span></a>
-			</div>
-		</div>
+	
+
+	
+
+
+		
 		<!-- /.row -->
-
-		<hr>
-
-		<a name="recepie"></a>
+		<a name="chefs"></a>
 		<!-- Project Three -->
 		<div class="row" style="padding-top: 100px">
 			<div class="col-md-7">
 				<div class="thumbnail">
-					<img src="<%=request.getContextPath()%>/resources/img/Maachi.jpg"
+					<img src="<%=request.getContextPath()%>/resources/img/chef.jpg"
 						alt="..." />
 					<div class="caption post-content">
 
-						<h3>desserts!</h3>
-						<p>Lorem ipsum dolor sit amet</p>
+						<h3>Write a FeedBack to us</h3>
+						<p>It will help us to improve</p>
 
 					</div>
 				</div>
 			</div>
-			<div class="col-md-5">
-				<h3>Project Three-About</h3>
-				<h4>Subheading</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					Omnis, temporibus, dolores, at, praesentium ut unde repudiandae
-					voluptatum sit ab debitis suscipit fugiat natus velit excepturi
-					amet commodi deleniti alias possimus!</p>
-				<a class="btn btn-primary" href="#">View Project <span
-					class="glyphicon glyphicon-chevron-right"></span></a>
-			</div>
-		</div>
-		<!-- /.row -->
-
-		<a name="recepie"></a>
-		<!-- Project Three -->
-		<div class="row" style="padding-top: 100px">
-			<div class="col-md-7">
-				<div class="thumbnail">
-					<img src="<%=request.getContextPath()%>/resources/img/Maachi.jpg"
-						alt="..." />
-					<div class="caption post-content">
-
-						<h3>desserts!</h3>
-						<p>Lorem ipsum dolor sit amet</p>
-
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-5">
-				<h3>Project Three-About</h3>
-				<h4>Subheading</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					Omnis, temporibus, dolores, at, praesentium ut unde repudiandae
-					voluptatum sit ab debitis suscipit fugiat natus velit excepturi
-					amet commodi deleniti alias possimus!</p>
-				<a class="btn btn-primary" href="#">View Project <span
-					class="glyphicon glyphicon-chevron-right"></span></a>
-			</div>
-		</div>
-		<!-- /.row -->
-
-
-		<a name="#chefCorner"></a>
-		<!-- Project Three -->
-		<div class="row" style="padding-top: 100px">
-			<div class="col-md-7">
-				<div class="thumbnail">
-					<img src="<%=request.getContextPath()%>/resources/img/Maachi.jpg"
-						alt="..." />
-					<div class="caption post-content">
-
-						<h3>desserts!</h3>
-						<p>Lorem ipsum dolor sit amet</p>
-
-					</div>
-				</div>
-			</div>
-			<div class="col-md-5">
+			<div class="col-md-5 stars">
 				<h3>Piyakad Bhaiya</h3>
 				<h4>Palan Data</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					Omnis, temporibus, dolores, at, praesentium ut unde repudiandae
-					voluptatum sit ab debitis suscipit fugiat natus velit excepturi
-					amet commodi deleniti alias possimus!</p>
-				<a class="btn btn-primary" href="#">View Project <span
-					class="glyphicon glyphicon-chevron-right"></span></a>
+				<p>theka offers you to get high on your low time making you to remember your " maa Ke Haath ka khana"   with the team of chef's from deep bore of regional chefs headed by manoj
+
+at desi theka our aim  is to provide you hygienic and healthy food with desi taste miles away form your " desh" . we collect fresh and specific  spices ansd ingridients from throughout the length and breadth of india
+
+our weekly course will make calm your chatori jeeb and keep you fit so that you dont become adrak.</p>
 			</div>
 		</div>
 		<!-- /.row -->
+		
 
 		<a name="feedback"></a>
 		<!-- Project Three -->
@@ -377,26 +284,7 @@
 
 
 
-	<!-- Project Four -->
-	<div class="row">
-
-		<div class="col-md-7">
-			<a href="#"> <img class="img-responsive"
-				src="<%=request.getContextPath()%>/resources/img/Maachi.jpg" alt="">
-			</a>
-		</div>
-		<div class="col-md-5">
-			<h3>Project Four</h3>
-			<h4>Subheading</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-				Explicabo, quidem, consectetur, officia rem officiis illum aliquam
-				perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit
-				quam in suscipit?</p>
-			<a class="btn btn-primary" href="#">View Project <span
-				class="glyphicon glyphicon-chevron-right"></span></a>
-		</div>
-	</div>
-	<!-- /.row -->
+	
 
 	<a name="contact"></a>
 	<!-- Project Three -->
@@ -428,29 +316,38 @@
 	</div>
 	<!-- /.row -->
 
+<!-- Project Three -->
+	<a name="recepie"></a>
+		<div class="row" style="padding-top: 100px">
+			<div class="col-md-7">
+				<div class="thumbnail">
+					<img src="<%=request.getContextPath()%>/resources/img/Maachi.jpg"
+						alt="..." />
+					<div class="caption post-content">
 
+						<h3>Suggest  a recepie</h3>
+						<p>Let's to serve what you want to eat</p>
 
+					</div>
+				</div>
+			</div>
+			<div class="col-md-5 stars">
+				<h3>Recepie</h3>
+				<form:form action="">
+					
+					<div class="col-md-5">
+						<h4>Write Us More</h4>
+						<textarea rows="" cols=""></textarea>
+					</div>
 
-	<!-- Project Four -->
-	<div class="row">
-
-		<div class="col-md-7">
-			<a href="#"> <img class="img-responsive"
-				src="<%=request.getContextPath()%>/resources/img/Maachi.jpg" alt="">
-			</a>
+				</form:form>
+				<a class="btn btn-primary" href="#">Submit Recepie <span
+					class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
 		</div>
-		<div class="col-md-5">
-			<h3>Project Four</h3>
-			<h4>Subheading</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-				Explicabo, quidem, consectetur, officia rem officiis illum aliquam
-				perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit
-				quam in suscipit?</p>
-			<a class="btn btn-primary" href="#">View Project <span
-				class="glyphicon glyphicon-chevron-right"></span></a>
-		</div>
-	</div>
-	<!-- /.row -->
+
+
+	
 
 
 	<!-- /.row -->
