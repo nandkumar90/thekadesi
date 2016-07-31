@@ -55,8 +55,9 @@ public class LunchController {
 	//for taking lunch booking parametes as a Lunchbooking object
 		@RequestMapping(value="/lunch/delivery", method = RequestMethod.POST,produces={"application/json"})
 		public @ResponseBody String lunchDelivery(LunchBooking lunchBooking) {
+			//extract 	expectedDeliveryDate, excpectedDeliveryTime from  deliverytime and set using setter;
 			Gson gson = new Gson();
-			String test="email " + lunchBooking.getEmailId()+"  "+"phoneno  "+lunchBooking.getPhoneNo()+"   "+"nooflunchbox   "+lunchBooking.getNoofTiffin()+"   location"+lunchBooking.getDeliveryLocation()+"   expected_deliverytime "+lunchBooking.getDeliveryTime();
+			String test="email " + lunchBooking.getEmailId()+"  "+"phoneno  "+lunchBooking.getPhoneNo()+"   "+"nooflunchbox   "+lunchBooking.getNoofTiffin()+"   location"+lunchBooking.getDeliveryLocation()+"  deliverytime "+lunchBooking.getDeliveryTime();
 		
 			return test;
 		} 
