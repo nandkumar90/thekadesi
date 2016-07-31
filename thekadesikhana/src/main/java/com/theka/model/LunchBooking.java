@@ -4,16 +4,24 @@ import java.sql.Time;
 import java.util.Date;
 
 public class LunchBooking {
-	private Date bookingDdate;
+	private int orderId;
 	private String emailId;
-	private int phoneNo;
+	private String phoneNo;
 	private String deliveryLocation;
 	private int noofTiffin;
 	private String deliveryTime;
 	//below two are extracted fields from delivery time 
 	private Date expectedDeliveryDate;
 	private Time excpectedDeliveryTime;
+	private Date bookingDdate;
+
 	
+	public int getOrderId() {
+		return orderId;
+	}
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
+	}
 	public String getDeliveryTime() {
 		return deliveryTime;
 	}
@@ -32,10 +40,10 @@ public class LunchBooking {
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
-	public int getPhoneNo() {
+	public String getPhoneNo() {
 		return phoneNo;
 	}
-	public void setPhoneNo(int phoneNo) {
+	public void setPhoneNo(String phoneNo) {
 		this.phoneNo = phoneNo;
 	}
 	public String getDeliveryLocation() {
