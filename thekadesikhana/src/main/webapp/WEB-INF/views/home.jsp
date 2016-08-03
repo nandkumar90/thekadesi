@@ -6,419 +6,523 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="<%=request.getContextPath()%>/resources/img/favicon.ico">
-
-    <title>ठेका देसी खाना</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="<%=request.getContextPath()%>/resources/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="<%=request.getContextPath()%>/resources/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <!-- Custom styles for this template -->
-    <link href="<%=request.getContextPath()%>/resources/css/starter-template.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="<%=request.getContextPath()%>/resources/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-<style>
- 
-.starter {
-  padding: 60px 15px;
-   
-}
-
- .navbar-inverse, .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: #000;
-    background-color:#000;
+ <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Theka Desi Khana</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
   }
-navbar-brand,
-.navbar-nav li a {
-    line-height: 60px;
-    height: 60px;
-    padding-top: 0.10em;
-}
-.navbar-inverse {
-     
-    border-bottom-style: solid;
-    border-bottom-width: medium;
-}
-
-.gly-rotate-45 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0.5);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
- 
- 
-
- 
-/*
- 		img.bg {
-			/* Set rules to fill background */
-			min-height: 100%;
-			min-width: 1024px;
-			
-			/* Set up proportionate scaling */
-			width: 100%;
-			height: auto;
-			
-			/* Set up positioning */
-			position: fixed;
-			top: 0;
-			left: 0;
-		}
-		
-		@media screen and (max-width: 1024px){
-			img.bg {
-				left: 50%;
-				margin-left: -512px; }
-		}
-		*/
-	
-
-
-	</style>
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+  </style>
 </head>
 
-<body>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<!--	<img src="img/landing.jpg" class="bg">-->
-	
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#" style="color:#FFFF00; font-size: 1.75em;">
-		  <span class="glyphicon glyphicon glyphicon-stop gly-rotate-45" aria-hidden="true" style="font-size: 0.5em;"></span>
-		   ठेका देसी खाना 
-		  <span class="glyphicon glyphicon glyphicon-stop gly-rotate-45" aria-hidden="true" style="font-size: 0.5em;"></span>
-		  <p style="color:#FFFFFF;font-size: 0.5em;">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
-		  &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-		  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; भयंकर गरम रोटी</p>
-		  </a>
-		  
-		 
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#today-menu">Today's Menu</a></li>
-			<li><a href="#recepie">Suggest a Dish</a></li>
-            <li><a href="#chefs">Chef's Corner</a></li>
-			<li><a href="#feedback">Feedback</a></li>
-         
-            <li><a href="#career">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-	<a name="today-menu"></a>
-	<div class="container-fluid starter">
-  <div class="row">
-  <div class="col-xs-12 col-md-8">
-  <div class="jumbotron">
-        <h1>Welcome!</h1>
-        <p class="lead"></p>
-       <!-- <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>-->
-      </div>
-  
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage"> <img src="" alt="Theka Desi Khana" ></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#band">Team</a></li>
+       <li><a href="#chef">Chef's Corner</a></li>
+       <li><a href="#menu">Menu</a></li>
+        
+        <li><a href="#dish">Suggest A Dish</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
   </div>
-  <div class="col-xs-6 col-md-4"><div class="list-group">
-  <a href="#" class="list-group-item active">
-    Today's Menu
-  </a>
-  <a href="#" class="list-group-item">Matar Paneer</a>
-  <a href="#" class="list-group-item">Rice</a>
-  <a href="#" class="list-group-item">Curd</a>
-  <a href="#" class="list-group-item">Pickle</a>
-  <a href="#" class="list-group-item">Matar Paneer</a>
-  <a href="#" class="list-group-item">Rice</a>
-  <a href="#" class="list-group-item">Curd</a>
-  <a href="#" class="list-group-item">Pickle</a>
-  <a href="#" class="list-group-item">Matar Paneer</a>
-  <a href="#" class="list-group-item">Rice</a>
-  <a href="#" class="list-group-item">Curd</a>
-  <a href="#" class="list-group-item"> 
-  <button type="button" class="btn btn-active"><span class="glyphicon glyphicon-grain gly-rotate-45" aria-hidden="true"></span> Register for Lunch</button></a>
-     
-  <a href="#" class="list-group-item"> 
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Or&nbsp;&nbsp;&nbsp;</p>
-  <button type="button" class="btn btn-active " data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-grain gly-rotate-45" aria-hidden="true"></span> Check Tommorow's menu</button>
-  <!-- Button trigger modal -->
- 
+</nav>
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Tommorow's Menu</h4>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="http://thekadesikhana.com/resources/img/landing.jpg" alt="New York" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Theka Desi khana</h3>
+          <p>Food is easiest way to get high.</p>
+        </div>
       </div>
-      <div class="modal-body">
-        <div class="list-group">
-   
-  <a href="#" class="list-group-item">Matar Paneer</a>
-  <a href="#" class="list-group-item">Rice</a>
-  <a href="#" class="list-group-item">Curd</a>
-  <a href="#" class="list-group-item">Pickle</a>
-  <a href="#" class="list-group-item">Matar Paneer</a>
-  <a href="#" class="list-group-item">Rice</a>
-  <a href="#" class="list-group-item">Curd</a>
-  <a href="#" class="list-group-item">Pickle</a>
-  <a href="#" class="list-group-item">Matar Paneer</a>
-  <a href="#" class="list-group-item">Rice</a>
-  <a href="#" class="list-group-item">Curd</a></div>
+
+      
+    </div>
+
+</div>
+
+<!-- Container (The Band Section) -->
+<div id="band" class="container text-center">
+  <h3>Who We Are</h3>
+  <p><em>We love Food and love to serve loveable food!</em></p>
+  <p>Started with a vision to overload tech-savvy, workaholic & underweight stomachs and growing on to bring tsunami of flavours in your mouth. The main aim always being around the glamour of desi khana, though not home made but always home like. With careful selection of fresh ingredients, an exquisite spread of menu items and a magical chef, we offer you to let the post-food burp echo in the ambience, saying, "Yaar, ghar di yaad dila dee da"
+
+Hamare Adarsh: Anyone can make you high on alcohol, we intend to get you high on food. "One way, to, rule them all". What is great in our team, is that everyone is crazy about food, which makes us our best critics. All in all, "khana aisa, ki jise bhagwaan ke liye bhi na chodein".</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Name</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="http://thekadesikhana.com/resources/img/manoj.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>Software Enginner and problem Solver</p>
+        <p>Love Food</p>
+        <p>Member since 20116</p>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-         
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Name</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="http://thekadesikhana.com/resources/img/manoj.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Software Enginner and problem Solver</p>
+        <p>Love Food</p>
+        <p>Member since 20116</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Name</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="http://thekadesikhana.com/resources/img/manoj.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>Software Enginner and problem Solver</p>
+        <p>Love Food</p>
+        <p>Member since 20116</p>
       </div>
     </div>
   </div>
 </div>
-  </a>
+
+<div id="chef" class="container text-center">
+  <h3>Piyakad Bhaiya</h3>
+  <p><em>We love Food and love to serve loveable food!</em></p>
+  <p>theka offers you to get high on your low time making you to remember your " maa Ke Haath ka khana"   with the team of chef's from deep bore of regional chefs headed by manoj
+
+at desi theka our aim  is to provide you hygienic and healthy food with desi taste miles away form your " desh" . we collect fresh and specific  spices ansd ingridients from throughout the length and breadth of india
+
+our weekly course will make calm your chatori jeeb and keep you fit so that you dont become adrak.</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Name</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="http://thekadesikhana.com/resources/img/manoj.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>Software Enginner and problem Solver</p>
+        <p>Love Food</p>
+        <p>Member since 20116</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Name</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="http://thekadesikhana.com/resources/img/manoj.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Drummer</p>
+        <p>Loves drummin'</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Name</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="http://thekadesikhana.com/resources/img/manoj.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>Bass player</p>
+        <p>Loves math</p>
+        <p>Member since 2005</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Container (TOUR Section) -->
+<div id="menu" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">Our Menu</h3>
+    <p class="text-center">Love Your home like food only for you.<br> Remember to book your Lunch!</p>
+    <ul class="list-group">
+      <li class="list-group-item">Roti <span class="label label-danger">4</span></li>
+      <li class="list-group-item">Panner Butter Mashala <span class="label label-danger">50 gm</span></li>
+      <li class="list-group-item">Rajma <span class="badge">40 gm</span></li>
+      <li class="list-group-item">Aloo Jeera <span class="badge">40 gm</span></li>
+      <li class="list-group-item">Sweet <span class="badge">40 gm</span></li>
+      <li class="list-group-item">Papad (Lijjat) <span class="badge">1</span></li>
+      <li class="list-group-item">Salad <span class="badge">40 gm</span></li>
+      <li class="list-group-item">Achar <span class="badge">40 gm</span></li>
+      <li class="list-group-item">Ghee <span class="badge">40 gm</span></li>
+      <li class="list-group-item">Fruit Chaat <span class="badge">40 gm</span></li>
+      <li class="list-group-item">Paneer Chilly <span class="badge">40 gm</span></li>
+
+
+
+
+
+    </ul>
+    
+    <div class="row text-center" align="centre">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <button class="btn" data-toggle="modal" data-target="#myModal">Book Your Lunch</button>
+        </div>
+      </div>
+    
+    </div>
+  </div>
   
-  </div></div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Book Your Lunch</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> No of lunch</label>
+              <input type="number" class="form-control" id="psw" placeholder="No Of Lunch?">
+            </div>
+             <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span>Your Phone No</label>
+              <input type="number" class="form-control" id="psw" placeholder="Contact No?">
+            </div>
+             <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span>Your Location</label>
+              <input type="number" class="form-control" id="psw" placeholder="Location">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span>Deliver Date</label>
+              <input type="number" class="form-control" id="psw" placeholder="Date">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay Now
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
+
+<!-- Container (suggest a dish Section) -->
+<div id="dish" class="container">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>We love our foodies!</em></p>
+
+  <div class="row">
+    
+    <div class="col-md-8" align="center">
+      
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
  
-
- <a name="chefs"></a>
-	<!-- Project Three -->
-	<div class="row" style="padding-top: 100px">
-		<div class="col-md-7">
-			<div class="thumbnail">
-				<img src="<%=request.getContextPath()%>/resources/img/chef.jpg"
-					alt="..." />
-				<div class="caption post-content">
-
-					<h3>Write a FeedBack to us</h3>
-					<p>It will help us to improve</p>
-
-				</div>
-			</div>
-		</div>
-		<div class="col-md-5 stars">
-			<h3>Piyakad Bhaiya</h3>
-			<h4>Palan Data</h4>
-			<p>theka offers you to get high on your low time making you to
-				remember your " maa Ke Haath ka khana" with the team of chef's from
-				deep bore of regional chefs headed by manoj at desi theka our aim is
-				to provide you hygienic and healthy food with desi taste miles away
-				form your " desh" . we collect fresh and specific spices ansd
-				ingridients from throughout the length and breadth of india our
-				weekly course will make calm your chatori jeeb and keep you fit so
-				that you dont become adrak.</p>
-		</div>
-	</div>
-	<!-- /.row -->
+</div>
 
 
-	<a name="feedback"></a>
-	<!-- Project Three -->
-	<div class="row" style="padding-top: 100px">
-		<div class="col-md-7">
-			<div class="thumbnail">
-				<img src="<%=request.getContextPath()%>/resources/img/Maachi.jpg"
-					alt="..." />
-				<div class="caption post-content">
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>We love our fans!</em></p>
 
-					<h3>Write a FeedBack to us</h3>
-					<p>It will help us to improve</p>
+  <div class="row">
+    <div class="col-md-4">
+      <p>Fan? Drop a note.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>SGR Dental College Road,Marathalli</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +91-9535526012</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: thekadesikhana@gmail.com</p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="phone" name="phone" placeholder="Phone no" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h3 class="text-center">From The Social Media</h3>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Facebook Page</a></li>
+    <li><a data-toggle="tab" href="#menu1">Twitter</a></li>
+    <li><a data-toggle="tab" href="#menu2">Zomato</a></li>
+  </ul>
 
-				</div>
-			</div>
-		</div>
-		<div class="col-md-5 stars">
-			<h3>Feed Back</h3>
-			<form action="">
-				<input class="star star-5" id="star-5" type="radio" name="star" />
-				<label class="star star-5" for="star-5"></label>
-				<input class="star star-4" id="star-4" type="radio" name="star" />
-				<label class="star star-4" for="star-4"></label>
-				<input class="star star-3" id="star-3" type="radio" name="star" />
-				<label class="star star-3" for="star-3"></label>
-				<input class="star star-2" id="star-2" type="radio" name="star" />
-				<label class="star star-2" for="star-2"></label>
-				<input class="star star-1" id="star-1" type="radio" name="star" />
-				<label class="star star-1" for="star-1"></label>
-				<div class="col-md-5">
-					<h4>Write Us More</h4>
-					<textarea rows="" cols=""></textarea>
-				</div>
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>Followe us on faceboook</h2>
+      <p>https://www.facebook.com/thekadesikhana</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>Follow us on twitter</h2>
+      <p>https://twitter.com/thekaDesiKhana</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>Follow us on zomatao</h2>
+      <p><a>https://www.zomato.com/bangalore/theka-desi-khana-marathahalli</a></p>
+    </div>
+  </div>
+</div>
 
-			</form>
-			<a class="btn btn-primary" href="#">Submit FeedBack <span
-				class="glyphicon glyphicon-chevron-right"></span></a>
-		</div>
-	</div>
-	<!-- /.row -->
+<div id="googleMap"></div>
 
-	<a name="career"></a>
-	<!-- Project Three -->
-	<div class="row" style="padding-top: 100px">
-		<div class="col-md-7">
-			<div class="thumbnail">
-				<img src="<%=request.getContextPath()%>/resources/img/Maachi.jpg"
-					alt="..." />
-				<div class="caption post-content">
+<!-- Add Google Maps -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(12.9490737,77.7008252);
 
-					<h3>career</h3>
-					<p>career</p>
+function initialize() {
+var mapProp = {
+center:myCenter,
+zoom:12,
+scrollwheel:false,
+draggable:false,
+mapTypeId:google.maps.MapTypeId.ROADMAP
+};
 
-				</div>
-			</div>
-		</div>
-		<form id="contact-form" method="get" action="caree" >
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-			<div class="col-md-5">
-				<h3>Email Address</h3>
-				<input path="email" class="form-control" id="email"
-					placeholder="Enter email" required="required" />
+var marker = new google.maps.Marker({
+position:myCenter,
+});
 
-				<div class="form-group">
-					<label for="subject">Subject</label>
-					 <select id="subject" name="subject" class="form-control" required="required" path="subject">
-						<option value="na" selected="">Choose One:</option>
-						<option value="service">I want to share my Food
-							experience with you</option>
-						<option value="suggestions">I have some ideas for you</option>
-						<option value="product">I want to join your team</option>
-					</select>
-				</div>
+marker.setMap(map);
+}
 
-				<div class="form-group">
-					<label for="name">Message</label>
-					<input path="message" name="message" id="message" class="form-control" rows="9"
-						cols="25" required="required" placeholder="Message"/>
-				</div>
-			</div>
-			<a class="btn btn-primary" href="#">Send Message <span
-				class="glyphicon glyphicon-chevron-right"></span></a>
-	</div>
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Let's get high on food@Theka Desi Khana</p>
+</footer>
 
-	</form>
-	</div>
-	<!-- /.row -->
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
 
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
+      // Store hash
+      var hash = this.hash;
 
-
-
-	<a name="contact"></a>
-	<!-- Project Three -->
-	<div class="row" style="padding-top: 100px">
-		<div class="col-md-7">
-			<div class="thumbnail">
-				<img src="<%=request.getContextPath()%>/resources/img/Maachi.jpg"
-					alt="..." />
-				<div class="caption post-content">
-
-					<h3>career</h3>
-					<p>career</p>
-
-				</div>
-			</div>
-		</div>
-		<div class="col-md-5">
-
-			<form id="contact-form" action="/career" method="post">
-				<h3>Food Experience</h3>
-
-
-				<h2>Want to say more</h2>
-				<textarea name="message" id="message" class="form-control" rows="9"
-					cols="25" required="required" placeholder="Message"></textarea>
-			</form>
-
-		</div>
-	</div>
-	<!-- /.row -->
-
-	<!-- Project Three -->
-	<a name="recepie"></a>
-	<div class="row" style="padding-top: 100px">
-		<div class="col-md-7">
-			<div class="thumbnail">
-				<img src="<%=request.getContextPath()%>/resources/img/Maachi.jpg"
-					alt="..." />
-				<div class="caption post-content">
-
-					<h3>Suggest a recepie</h3>
-					<p>Let's to serve what you want to eat</p>
-
-				</div>
-			</div>
-		</div>
-		<div class="col-md-5 stars">
-			<h3>Recepie</h3>
-			<form action="">
-
-				<div class="col-md-5">
-					<h4>Write Us More</h4>
-					<textarea rows="" cols=""></textarea>
-				</div>
-
-			</form>			
-			<a class="btn btn-primary" href="#">Submit Recepie <span
-				class="glyphicon glyphicon-chevron-right"></span></a>
-		</div>
-	</div>
-
-
-
-
-
-	<!-- /.row -->
-
-
-	<!-- Footer -->
-	<footer>
-	<div class="row">
-		<div class="col-lg-12">
-			<p>
-				Copyright &copy; <a href="http://thekadesikhana.com/">thekadesikhana.com</a>
-			</p>
-		</div>
-	</div>
-	<!-- /.row --> </footer>
-        
-     
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="<%=request.getContextPath()%>/resources/js/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="<%=request.getContextPath()%>/resources/js/ie10-viewport-bug-workaround.js"></script>
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
   </body>
 </html>
