@@ -174,7 +174,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#myPage">HOME</a></li>
-        <li><a href="#band">Team</a></li>
+        <li><a href="#team">Team</a></li>
        <li><a href="#chef">Chef's Corner</a></li>
        <li><a href="#menu">Menu</a></li>
         
@@ -206,7 +206,7 @@
 </div>
 
 <!-- Container (The Band Section) -->
-<div id="band" class="container text-center">
+<div id="team" class="container text-center">
   <h3>Who We Are</h3>
   <p><em>We love Food and love to serve loveable food!</em></p>
   <p>Started with a vision to overload tech-savvy, workaholic & underweight stomachs and growing on to bring tsunami of flavours in your mouth. The main aim always being around the glamour of desi khana, though not home made but always home like. With careful selection of fresh ingredients, an exquisite spread of menu items and a magical chef, we offer you to let the post-food burp echo in the ambience, saying, "Yaar, ghar di yaad dila dee da"
@@ -228,7 +228,7 @@ Hamare Adarsh: Anyone can make you high on alcohol, we intend to get you high on
     <div class="col-sm-4">
       <p class="text-center"><strong>Name</strong></p><br>
       <a href="#demo2" data-toggle="collapse">
-        <img src="http://thekadesikhana.com/resources/img/manoj.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+        <img src="http://thekadesikhana.com/resources/img/delhi.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
       <div id="demo2" class="collapse">
         <p>Software Enginner and problem Solver</p>
@@ -239,7 +239,7 @@ Hamare Adarsh: Anyone can make you high on alcohol, we intend to get you high on
     <div class="col-sm-4">
       <p class="text-center"><strong>Name</strong></p><br>
       <a href="#demo3" data-toggle="collapse">
-        <img src="http://thekadesikhana.com/resources/img/manoj.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+        <img src="http://thekadesikhana.com/resources/img/mandvi.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
       <div id="demo3" class="collapse">
         <p>Software Enginner and problem Solver</p>
@@ -445,15 +445,15 @@ our weekly course will make calm your chatori jeeb and keep you fit so that you 
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
       <h2>Followe us on faceboook</h2>
-      <p>https://www.facebook.com/thekadesikhana</p>
+      <p> <a href="https://www.facebook.com/thekadesikhana">https://www.facebook.com/thekadesikhana</a></p>
     </div>
     <div id="menu1" class="tab-pane fade">
       <h2>Follow us on twitter</h2>
-      <p>https://twitter.com/thekaDesiKhana</p>
+      <p><a href="https://twitter.com/thekaDesiKhana">https://twitter.com/thekaDesiKhana</a></p>
     </div>
     <div id="menu2" class="tab-pane fade">
       <h2>Follow us on zomatao</h2>
-      <p><a>https://www.zomato.com/bangalore/theka-desi-khana-marathahalli</a></p>
+      <p><a href="https://www.zomato.com/bangalore/theka-desi-khana-marathahalli">https://www.zomato.com/bangalore/theka-desi-khana-marathahalli</a></a></p>
     </div>
   </div>
 </div>
