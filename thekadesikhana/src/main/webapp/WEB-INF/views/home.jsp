@@ -215,7 +215,7 @@ Hamare Adarsh: Anyone can make you high on alcohol, we intend to get you high on
   <br>
   <div class="row">
     <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
+      <p class="text-center"><strong>Manoj Agrawal</strong></p><br>
       <a href="#demo" data-toggle="collapse">
         <img src="http://thekadesikhana.com/resources/img/manoj.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
@@ -226,9 +226,9 @@ Hamare Adarsh: Anyone can make you high on alcohol, we intend to get you high on
       </div>
     </div>
     <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
-      <a href="#demo2" data-toggle="collapse">
-        <img src="http://thekadesikhana.com/resources/img/delhi.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      <p class="text-center"><strong>R.L.SINGH</strong></p><br>
+      <a href="#demo2" >
+        <img src="http://thekadesikhana.com/resources/img/test.png" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
       <div id="demo2" class="collapse">
         <p>Software Enginner and problem Solver</p>
@@ -237,7 +237,7 @@ Hamare Adarsh: Anyone can make you high on alcohol, we intend to get you high on
       </div>
     </div>
     <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
+      <p class="text-center"><strong>Mandvi Singh</strong></p><br>
       <a href="#demo3" data-toggle="collapse">
         <img src="http://thekadesikhana.com/resources/img/mandvi.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
       </a>
@@ -259,7 +259,7 @@ at desi theka our aim  is to provide you hygienic and healthy food with desi tas
 
 our weekly course will make calm your chatori jeeb and keep you fit so that you dont become adrak.</p>
   <br>
-  <div class="row">
+  <!-- div class="row">
     <div class="col-sm-4">
       <p class="text-center"><strong>Name</strong></p><br>
       <a href="#demo" data-toggle="collapse">
@@ -293,7 +293,7 @@ our weekly course will make calm your chatori jeeb and keep you fit so that you 
         <p>Member since 2005</p>
       </div>
     </div>
-  </div>
+  </div-->
 </div>
 
 
@@ -381,7 +381,7 @@ our weekly course will make calm your chatori jeeb and keep you fit so that you 
 
 <!-- Container (suggest a dish Section) -->
 <div id="dish" class="container">
-  <h3 class="text-center">Contact</h3>
+  <h3 class="text-center">Suggest your recipe</h3>
   <p class="text-center"><em>We love our foodies!</em></p>
 
   <div class="row">
