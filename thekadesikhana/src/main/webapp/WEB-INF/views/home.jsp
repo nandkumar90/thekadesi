@@ -314,11 +314,6 @@ our weekly course will make calm your chatori jeeb and keep you fit so that you 
       <li class="list-group-item">Ghee <span class="badge">40 gm</span></li>
       <li class="list-group-item">Fruit Chaat <span class="badge">40 gm</span></li>
       <li class="list-group-item">Paneer Chilly <span class="badge">40 gm</span></li>
-
-
-
-
-
     </ul>
     
     <div class="row text-center" align="centre">
@@ -403,7 +398,7 @@ our weekly course will make calm your chatori jeeb and keep you fit so that you 
 
 <!-- Container (Contact Section) -->
 <div id="contact" class="container">
-  <h3 class="text-center">Contact</h3>
+  <h3 class="text-center">Contact </h3>
   <p class="text-center"><em>We love our fans!</em></p>
 
   <div class="row">
