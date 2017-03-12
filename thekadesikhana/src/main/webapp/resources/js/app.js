@@ -28,7 +28,7 @@
 					}
 				}
 			});
-			$stateProvider.state('cart', {
+			$stateProvider.state('cartDetail', {
 				url: '/cartDetail',
 				templateUrl: 'resources/views/cartDetail.html',
 				controller: 'cartCtrl'
@@ -41,6 +41,11 @@
 			$stateProvider.state('gallery', {
 				url: '/gallery',
 				templateUrl: 'resources/views/gallery.html'
+				
+			});
+			$stateProvider.state('about', {
+				url: '/gallery',
+				templateUrl: 'resources/views/about.html'
 				
 			});
 
