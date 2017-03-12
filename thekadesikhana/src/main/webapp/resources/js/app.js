@@ -22,7 +22,7 @@
 				resolve:{
 					menuData:function($http){
 						console.log('test');
-						return $http.get('http://107.23.59.43:8787/thekadesi/menu/today').then(function(response){
+						return $http.get('http://107.23.59.43:8787/thekadesi/webmenu/today').then(function(response){
 							return response.data;
 						});
 					}

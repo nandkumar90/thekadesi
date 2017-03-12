@@ -10,13 +10,13 @@
           <div class="line">
             <div class="margin text-center">
             <div ng-repeat='menu in menuItems track by $index' >
-              <div class="s-12 m-12 l-4 margin-bottom" ng-repeat=' item in menu.Bengali.menuItems'>
+              <div class="s-12 m-12 l-4 margin-bottom">
                 <div class="padding-2x block-bordered border-radius">
                   <i class="icon-paperplane_ico icon2x text-primary margin-bottom-30"></i>
-                  <h2 class="text-thin">{{item.cuisine.name}}/{{item.cuisine.type}}</h2>
-                  <p class="margin-bottom-30"><img src="{{item.urlMobile}}" alt="">{{item.items}}</p>
+                  <h2 class="text-thin">{{menu.cuisine.name}}/{{menu.cuisine.type}}</h2>
+                  <p class="margin-bottom-30"><img src="{{item.urlMobile}}" alt="">{{menu.items}}</p>
                        <div style="border-top:1px solid black;">
-                         <span style="float: left">{{item.price}}</span>
+                         <span style="float: left">{{menu.price}}</span>
                          <span style="float: right"><button class="btn-style">Add to Cart</button></span>
                        </div>
                     
