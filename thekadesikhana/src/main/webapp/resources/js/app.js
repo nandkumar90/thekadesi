@@ -44,7 +44,7 @@
 				
 			});
 			$stateProvider.state('about', {
-				url: '/gallery',
+				url: '/about',
 				templateUrl: 'resources/views/about.html'
 				
 			});
