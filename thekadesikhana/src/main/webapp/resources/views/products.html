@@ -11,13 +11,14 @@
             <div class="margin text-center">
             <div ng-repeat='menu in menuItems track by $index' >
               <div class="s-12 m-12 l-4 margin-bottom">
-                <div class="padding-2x block-bordered border-radius">
+                <div class="padding-2x block-bordered border-radius " style='margin-right:10px'>
                   <i class="icon-paperplane_ico icon2x text-primary margin-bottom-30"></i>
                   <h2 class="text-thin">{{menu.cuisine.name}}/{{menu.cuisine.type}}</h2>
-                  <p class="margin-bottom-30"><img src="{{item.urlMobile}}" alt="">{{menu.items}}</p>
-                       <div style="border-top:1px solid black;">
-                         <span style="float: left">{{menu.price}}</span>
-                         <span style="float: right"><button class="btn-style">Add to Cart</button></span>
+                  <p class="margin-bottom-10 desc-color"><img ng-class="{'highLight':cart.isInCart(menu.id)}" src="{{menu.urlMobile}}" alt="Logo"/>{{menu.items}}</p>
+                       <div style="border-top:1px solid black;padding-top:3px;">
+                         <span style="float: left;" class='desc-color'><i class="fa fa-inr margin-right-5"></i>{{menu.price}}</span>
+                         <span style="float: right"><button class="order-button" ng-click="addToCart(menu.id,menu.cuisine.name,menu.price,1,menu.cuisine.type);">Add to Cart</button></span>
+                         <span style="float: right;"><button ng-show='cart.isInCart(menu.id)' ng-click="addToCart(menu.id,menu.cuisine.name,menu.price,-1,menu.cuisine.type);" class="subtract"><i class="fa fa-minus" ></i></button></span>
                        </div>
                     
 

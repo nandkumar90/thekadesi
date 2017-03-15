@@ -8,10 +8,15 @@
 	thekaApplication.config(['$stateProvider', '$urlRouterProvider',
 		function($stateProvider, $urlRouterProvider) {
 
-			$stateProvider.state('main', {
-				url: '/',
-				templateUrl: 'resources/views/index.html',
-			    controller:'mainCtrl'
+			$stateProvider.state('home', {
+				url: '/home',
+				templateUrl: 'resources/views/home.html',
+			    controller:'productCtrl',
+			    resolve:{
+			    	menuData:function () {
+			    		return null;
+			    	}
+			    }
 				
 			});
 			
@@ -31,7 +36,12 @@
 			$stateProvider.state('cartDetail', {
 				url: '/cartDetail',
 				templateUrl: 'resources/views/cartDetail.html',
-				controller: 'cartCtrl'
+				controller: 'productCtrl',
+				resolve:{
+			    	menuData:function () {
+			    		return null;
+			    	}
+			    }
 			});
 			$stateProvider.state('contact', {
 				url: '/contact',
@@ -49,8 +59,7 @@
 				
 			});
 
-			$urlRouterProvider
-				.otherwise('main');
+			
 
 		}
 	]);
