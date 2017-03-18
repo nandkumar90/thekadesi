@@ -69,7 +69,24 @@ button.order-button:hover {
   opacity: 0.5;
 }
 
+.has-error{
+  border: 1px solid red !important;
+}
 
+button[disabled]{
+  opacity: 0.5;
+  cursor: not-allowed ! important;
+}
+
+
+
+.custom-label{
+   padding:5px;
+    color:#222;
+    font-family:corbel,sans-serif;
+    font-size: 14px;
+    margin: 10px;
+}
 /* Typography */
 body {
   background: #fff;
@@ -182,7 +199,7 @@ b, strong, .text-strong {
 }
 blockquote::before {
   color: #e0e0e0;
-  content: "“";
+  content: "â€œ";
   display: block;
   float: left;
   font-family: georgia;

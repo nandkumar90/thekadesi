@@ -10,7 +10,7 @@
           <div class="line">
             <div class="margin">
               
-              <!-- Company Information -->
+              <!-- Cart Information -->
               <div class="s-12 m-12 l-6">
                 
 <table class="responstable">
@@ -31,7 +31,7 @@
                 </tr>
 
                 <!-- cart items -->
-                <tr ng-repeat="item in cart.items | orderBy:'name'">
+                <tr ng-repeat="item in cart.items track by $index | orderBy:'name'">
                     <td>{{item.name}}/{{item.type}}</td>
                     <td class="tdCenter">
                       <div class="input-append">
@@ -43,11 +43,11 @@
                         <button 
                             class="btn btn-success" type="button" 
                             ng-disabled="item.quantity >= 1000"
-                            ng-click="cart.addItem(item.sku, item.name, item.price, +1);$emit('updateCart');">+</button>
+                            ng-click="cart.addItem(item.sku, item.name, item.price, +1,item.type);$emit('updateCart');">+</button>
                         <button 
                             class="btn btn-inverse" type="button" 
                             ng-disabled="item.quantity < 1"
-                            ng-click="cart.addItem(item.sku, item.name, item.price, -1);$emit('updateCart');">-</button>
+                            ng-click="cart.addItem(item.sku, item.name, item.price, -1,item.type);$emit('updateCart');">-</button>
                       </div>
                     </td>
                     <td class="tdRight">{{item.price * item.quantity | currency:'&#8377;'}}</td>
@@ -67,36 +67,49 @@
                 </tr>
   
 </table>
+ <div class="s-12 m-12 l-6">
+              <h3> Payment Type</h3>
+              <input  type="radio" ng-model="paymentMethod" value="online" /><label class="custom-label">Online</label>
+             <input  type="radio" ng-model="paymentMethod" value="cash On Delivery"/><label class="custom-label">Cash On Delivery</label>
+              
               </div>
+              </div>
+             
               
               <!-- Contact Form -->
               <div class="s-12 m-12 l-6">
                 <h2 class="text-uppercase text-strong margin-bottom-30">Delivery Address</h2>
-                <form class="customform">
+                <form class="customform" name="orderForm" ng-submit="submitted=true; orderForm.$valid && placeOrder()" novalidate>
                   <div class="line">
                     <div class="margin">
-                      <div class="s-12 m-12 l-6">
-                        <input name="email" class="required email border-radius" placeholder="Your e-mail" title="Your e-mail" type="text" />
+                      <div class="s-12 m-12 l-6" >
+                        <input ng-class="{'has-error':orderForm.email.$invalid && submitted}" ng-model="user.mail"name="email" class="required email border-radius" placeholder="Your e-mail" title="Your e-mail" type="text" ng-required=true />
                       </div>
-                      <div class="s-12 m-12 l-6">
-                        <input name="name" class="name border-radius" placeholder="Your name" title="Your name" type="text" />
+                      <div class="s-12 m-12 l-6" >
+                        <input  ng-class="{'has-error':orderForm.name.$invalid && submitted}" ng-model="user.name" name="name" class="name border-radius" placeholder="Your name" title="Your name" type="text" ng-required=true />
                       </div>
                     </div>
                   </div>
-                  <div class="s-12"> 
-                    <input name="subject" class="subject border-radius" placeholder="Phone No" title="Mobile No" type="text" />
+                  <div class="s-12" style="position:relative;"> 
+                    <input only-digits ng-class="{'has-error':orderForm.contact.$invalid && submitted}" ng-model="user.contact" ng-maxlength="10" name="contact" class="subject border-radius" placeholder="Phone No" title="Mobile No" type="text" ng-required=true />
+                     <span style="position:absolute; bottom:2px;color:red ;font-size: 12px;" ng-show="orderForm.contact.$error.maxlength">Please Enter 10 digits Mobile Number</span>
                   </div>
-                  <div class="s-12">
-                    <textarea name="message" class="required message border-radius" placeholder="Your Address" rows="3"></textarea>
+                  <div class="s-12" >
+                    <textarea ng-class="{'has-error':orderForm.address.$invalid && submitted}" ng-model="user.address" name="address" class="required message border-radius" placeholder="Your Address" rows="3" ng-required=true ></textarea>
                   </div>
-                  <div class="s-12 m-12 l-4"><button class="submit-form button background-primary border-radius text-white" type="submit">Place Ur Order</button></div> 
+                  <div class="s-12 m-12 l-4"><button class="submit-form button background-primary border-radius text-white" type="submit" ng-disabled="cart.getTotalCount() <= 0 ">Place Ur Order</button></div> 
                 </form>
               </div>  
             </div>  
           </div> 
         </div> 
       </article>
-      
+      <div class="background-primary padding text-center">
+        <a href="/"><i class="icon-facebook_circle icon2x text-white"></i></a> 
+        <a href="/"><i class="icon-twitter_circle icon2x text-white"></i></a>
+        <a href="/"><i class="icon-google_plus_circle icon2x text-white"></i></a>
+        <a href="/"><i class="icon-instagram_circle icon2x text-white"></i></a>                                                                        
+      </div>
       <!-- MAP -->
      
     </main>
