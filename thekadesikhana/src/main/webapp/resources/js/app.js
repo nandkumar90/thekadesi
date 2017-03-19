@@ -58,7 +58,38 @@
 				templateUrl: 'resources/views/about.html'
 				
 			});
-
+			
+			$stateProvider.state('corporate', {
+				url: '/service/corporate',
+				templateUrl: 'resources/views/thankYou.html'
+				
+			});
+			
+			$stateProvider.state('startup', {
+				url: '/service/startup',
+				templateUrl: 'resources/views/thankYou.html'
+				
+			});
+			
+			$stateProvider.state('pgHolder', {
+				url: '/service/pgHolder',
+				templateUrl: 'resources/views/thankYou.html'
+				
+			});
+			
+			$stateProvider.state('batchelor', {
+				url: '/service/batchelor',
+				templateUrl: 'resources/views/thankYou.html'
+				
+			});
+		
+		
+			
+			$stateProvider.state('dietFood', {
+				url: '/service/dietFood',
+				templateUrl: 'resources/views/thankYou.html'
+				
+			});
 			
 
 		}

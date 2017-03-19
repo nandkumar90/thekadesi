@@ -531,7 +531,7 @@ aside.aside-left {
 .image-hover-overlay-content *,
 .background-primary, .background-primary p, a.background-primary, a.background-primary:visited, a.background-primary:link, .background-primary a, .background-primary a:link, .background-primary a:visited, .background-primary a:hover, .background-primary a:active,
 .primary-color-primary .background-primary, .primary-color-primary .background-primary p, .primary-color-primary a.background-primary, .primary-color-primary a.background-primary:visited, .primary-color-primary a.background-primary:link, .primary-color-primary .background-primary a, .primary-color-primary .background-primary a:link, .primary-color-primary .background-primary a:visited, .primary-color-primary .background-primary a:hover, .primary-color-primary .background-primary a:active {
-  color: rgba(255,255,255, 0.75);
+  color: rgb(0, 38, 51);
 }
 .background-dark h1, .background-dark h2, .background-dark h3, .background-dark h4, .background-dark h5, .background-dark h6,
 .background-dark .h1, .background-dark .h2, .background-dark .h3, .background-dark .h4, .background-dark .h5, .background-dark .h6, 
@@ -541,10 +541,10 @@ aside.aside-left {
 .background-primary .h1, .background-primary .h2, .background-primary .h3, .background-primary .h4, .background-primary .h5, .background-primary .h6,
 .primary-color-primary .background-primary h1, .primary-color-primary .background-primary h2, .primary-color-primary .background-primary h3, .primary-color-primary .background-primary h4, .primary-color-primary .background-primary h5, .primary-color-primary .background-primary h6,
 .primary-color-primary .background-primary .h1, .primary-color-primary .background-primary .h2, .primary-color-primary .background-primary .h3, .primary-color-primary .background-primary .h4, .primary-color-primary .background-primary .h5, .primary-color-primary .background-primary .h6 {
-  color: #fff;
+  color: #002633;
 }
 .text-white, .text-white *, .primary-color-white .text-primary, .primary-color-white .text-primary * {
-  color: #fff !important;
+  color: #323232 !important;
 }
 .text-primary, .text-primary *, .primary-color-primary .text-primary, .primary-color-primary .text-primary * {
   color: #fede01 !important;
