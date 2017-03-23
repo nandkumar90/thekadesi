@@ -22,7 +22,28 @@ var storeModule=angular.module('storeModule',[])
         orderDetails.paymentType=$scope.paymentMethod;
         orderDetails.totalDue=$scope.cart.getTotalPrice();
         console.log(JSON.stringify(orderDetails));
-        $http.post('url',orderDetails).then(function (response) {
+        $http.post('http://107.23.59.43:8787/thekadesi/weborder',orderDetails).then(function (response) {
+            // body...
+        },function(error)
+        {
+
+        })
+    }
+   
+    
+}).controller('contactCtrl',function($scope,menuData,DataService,$http){
+	$scope.user={
+       
+    };
+
+
+	
+    $scope.contactUs=function(){
+        var orderDetails={};
+        userInfo=$scope.user;
+       
+        console.log(JSON.stringify(orderDetails));
+        $http.post('http://107.23.59.43:8787/thekadesi/feedback',userInfo).then(function (response) {
             // body...
         },function(error)
         {

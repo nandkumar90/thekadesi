@@ -46,26 +46,27 @@
               </div>
               
               <!-- Contact Form -->
-              <div class="s-12 m-12 l-6">
+               <div class="s-12 m-12 l-6">
                 <h2 class="text-uppercase text-strong margin-bottom-30">Contact Us</h2>
-                <form class="customform">
+                <form class="customform" name="orderForm" ng-submit="submitted=true; orderForm.$valid && contactUs()" novalidate>
                   <div class="line">
                     <div class="margin">
-                      <div class="s-12 m-12 l-6">
-                        <input name="email" class="required email border-radius" placeholder="Your e-mail" title="Your e-mail" type="text" />
+                      <div class="s-12 m-12 l-6" >
+                        <input ng-class="{'has-error':orderForm.email.$invalid && submitted}" ng-model="user.mail"name="email" class="required email border-radius" placeholder="Your e-mail" title="Your e-mail" type="text" ng-required=true />
                       </div>
-                      <div class="s-12 m-12 l-6">
-                        <input name="name" class="name border-radius" placeholder="Your name" title="Your name" type="text" />
+                      <div class="s-12 m-12 l-6" >
+                        <input  ng-class="{'has-error':orderForm.name.$invalid && submitted}" ng-model="user.name" name="name" class="name border-radius" placeholder="Your name" title="Your name" type="text" ng-required=true />
                       </div>
                     </div>
                   </div>
-                  <div class="s-12"> 
-                    <input name="subject" class="subject border-radius" placeholder="Subject" title="Subject" type="text" />
+                  <div class="s-12" style="position:relative;"> 
+                    <input only-digits ng-class="{'has-error':orderForm.contact.$invalid && submitted}" ng-model="user.contact" ng-maxlength="10" name="contact" class="subject border-radius" placeholder="Phone No" title="Mobile No" type="text" ng-required=true />
+                     <span style="position:absolute; bottom:2px;color:red ;font-size: 12px;" ng-show="orderForm.contact.$error.maxlength">Please Enter 10 digits Mobile Number</span>
                   </div>
-                  <div class="s-12">
-                    <textarea name="message" class="required message border-radius" placeholder="Your message" rows="3"></textarea>
+                  <div class="s-12" >
+                    <textarea ng-class="{'has-error':orderForm.address.$invalid && submitted}" ng-model="user.message" name="address" class="required message border-radius" placeholder="Your Thought" rows="3" ng-required=true ></textarea>
                   </div>
-                  <div class="s-12 m-12 l-4"><button class="submit-form button background-primary border-radius text-white" type="submit">Feed Us Back</button></div> 
+                  <div class="s-12 m-12 l-4"><button class="submit-form button background-primary border-radius text-white" type="submit" ng-disabled="cart.getTotalCount() <= 0 ">Feed Us Back</button></div> 
                 </form>
               </div>  
             </div>  

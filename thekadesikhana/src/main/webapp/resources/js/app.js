@@ -65,6 +65,14 @@
 				
 			});
 			
+			
+			$stateProvider.state('coworking', {
+				url: '/service/coworking',
+				templateUrl: 'resources/views/thankYou.html'
+				
+			});
+			
+			
 			$stateProvider.state('startup', {
 				url: '/service/startup',
 				templateUrl: 'resources/views/thankYou.html'
