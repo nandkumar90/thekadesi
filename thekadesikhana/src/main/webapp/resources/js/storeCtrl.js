@@ -31,19 +31,13 @@ var storeModule=angular.module('storeModule',[])
     }
    
     
-}).controller('contactCtrl',function($scope,menuData,DataService,$http){
-	$scope.user={
-       
-    };
-
-
-	
+}).controller('contactCtrl',function($scope,$http){
+		
     $scope.contactUs=function(){
-        var orderDetails={};
-        userInfo=$scope.user;
+       $scope.user={};
        
-        console.log(JSON.stringify(orderDetails));
-        $http.post('http://107.23.59.43:8787/thekadesi/feedback',userInfo).then(function (response) {
+        console.log(JSON.stringify($scope.user));
+        $http.post('http://107.23.59.43:8787/thekadesi/feedback',$scope.user).then(function (response) {
             // body...
         },function(error)
         {
