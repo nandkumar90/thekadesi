@@ -1,5 +1,5 @@
 var storeModule=angular.module('storeModule',[])
-.controller('productCtrl',function($scope,menuData,DataService,$http){
+.controller('productCtrl',function($scope,menuData,DataService,$http, $window){
 	$scope.user={
        
     };
@@ -23,7 +23,7 @@ var storeModule=angular.module('storeModule',[])
         orderDetails.totalDue=$scope.cart.getTotalPrice();
         console.log(JSON.stringify(orderDetails));
         $http.post('http://107.23.59.43:8787/thekadesi/weborder',orderDetails).then(function (response) {
-            // body...
+        	$window.location.href=response.data.paymentUrl;
         },function(error)
         {
 
@@ -32,9 +32,9 @@ var storeModule=angular.module('storeModule',[])
    
     
 }).controller('contactCtrl',function($scope,$http){
-		
+    $scope.user={};
+
     $scope.contactUs=function(){
-       $scope.user={};
        
         console.log(JSON.stringify($scope.user));
         $http.post('http://107.23.59.43:8787/thekadesi/feedback',$scope.user).then(function (response) {
