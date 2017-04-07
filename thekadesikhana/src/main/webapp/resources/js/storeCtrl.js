@@ -1,8 +1,7 @@
 var storeModule=angular.module('storeModule',[])
 .controller('productCtrl',function($scope,menuData,DataService,$http, $window){
-	$scope.user={
-       
-    };
+	$scope.user={};
+  var orderDetails={};
 
     $scope.paymentMethod="online";
 
@@ -16,19 +15,22 @@ var storeModule=angular.module('storeModule',[])
 	}
 	
     $scope.placeOrder=function(){
-        var orderDetails={};
+        
         orderDetails.userInfo=$scope.user;
         orderDetails.orderInfo=$scope.cart.items;
         orderDetails.paymentType=$scope.paymentMethod;
         orderDetails.totalDue=$scope.cart.getTotalPrice();
+      orderDetails.creditUrl='https://www.instamojo.com/nandkumar90/thekadesikhana/?data_amount='+$scope.cart.getTotalPrice()+'&data_email='+$scope.user.mail +'&data_name='+$scope.user.name+'&data_phone='+$scope.user.contact+'&data_readonly=data_amount  rel="im-checkout" data-behaviour="link" data-style="flat-dark" data-text="Checkout With Instamojo">Checkout</a>';
         console.log(JSON.stringify(orderDetails));
         $http.post('http://107.23.59.43:8787/thekadesi/weborder',orderDetails).then(function (response) {
-        	$window.location.href=response.data.paymentUrl;
+        	
         },function(error)
         {
 
         })
     }
+
+
    
     
 }).controller('contactCtrl',function($scope,$http){
@@ -88,4 +90,5 @@ var storeModule=angular.module('storeModule',[])
         ctrl.$parsers.push(inputValue);
       }
     };
-});;
+});
+
