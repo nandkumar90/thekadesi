@@ -61,15 +61,13 @@ var storeModule=angular.module('storeModule',[])
     updateCart();
 })
 
-.controller('thankYouCtrl',function($scope,DataService,$window){
+.controller('thankYouCtrl',function($scope,DataService,$location,$http){
 
-    console.log($window.location.href);
-    console.log($window.location.search);
+    console.log($location.search()); 
 
-    var paramValue = $window.location.search(payment_request_id);
-    console.log($location.search(payment_request_id)); 
+    var paramValue = $location.search()['payment_request_id'];
+    console.log(paramValue); 
     var orderDetailUrl='http://107.23.59.43:8787/thekadesi/gateway/order/'+paramValue;
-    console.log(JSON.stringify(orderDetails));
     $http.get(orderDetailUrl).then(function (response) {
     	 console.log(response);
     },function(error)
