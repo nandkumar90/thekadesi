@@ -1,71 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app='theka'>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Theka Desi Khana |Get High On Food|</title>
+    <meta name="keywords" content="Food Delivery, Bangalore, Outer Ring Road, ORR, Office Food Delivery, North Indian Food, Punjabi, Punjabi Food, Odia Food">
+    <meta name="description" content="..is a food startup which promises to deliver you home like food across Bangalore. 29 States, 29 different type of meals. In here we..."> 
+    <link rel="icon" href="../../favicon.ico">
 
+     <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/icons.css">
+    <link rel="stylesheet" href="../css/responsee.css">
+    <link rel="stylesheet" href="../owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="../owl-carousel/owl.theme.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="../css/template-style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+   
+    <script type="text/javascript" src="../js/angular.min.js"></script>  
+    <script type="text/javascript" src="../js/angular-ui-router.min.js"></script> 
+     
+    <script type="text/javascript" src="../js/storeCtrl.js"></script>
+    <script type="text/javascript" src="../js/shoppingCart.js"></script> 
+    
+    <script type="text/javascript" src="../js/app.js"></script>
+     <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93051541-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </head>  
+  
+  <body class="size-1140" ng-controller='thankYouCtrl'>
+  
+    <!-- HEADER -->
+    <header role="banner" class='header'>    
+      <!-- Top Bar -->
+      <div class="top-bar background-white">
+        <div class="line">
+          <div class="s-12 m-6 l-6">
+            <div class="top-bar-contact">
+              <p class="text-size-12">Food is the healthiest way to get high... Call/Whatsapp us @7348815961(11AM to 3PM) && (7-11pm)
+ | <a class="text-orange-hover" href="mailto:sales@thekadesikhana.com">sales@thekadesikhana.com</a></p>
+            </div>
+          </div>
+          <div class="s-12 m-6 l-6">
+            <div class="right">
+              <ul class="top-bar-social right">
+                <li><a href="/"><i class="icon-facebook_circle text-orange-hover"></i></a></li>
+                <li><a href="/"><i class="icon-twitter_circle text-orange-hover"></i></a> </li>
+                <li><a href="/"><i class="icon-google_plus_circle text-orange-hover"></i></a></li>
+                <li><a href="/"><i class="icon-instagram_circle text-orange-hover"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Top Navigation -->
+      <nav class="background-white background-primary-hightlight">
+        <div class="line">
+          <div class="s-12 l-2">
+            <a href="/thekadesikhana" class="logo"><img src="../img/logo.png" alt=""></a>
+          </div>
+          <div class="top-nav s-12 l-10">
+            <p class="nav-text"></p>
+            <ul class="right chevron">
+              <li><a ui-sref="products">Products</a></li>
+              <li><a>Services</a>
+
+                <ul>
+                   
+                  <li><a ui-sref="corporate">Corporate Catering</a></li>
+                  <li><a ui-sref="batchelor">Special Pkgs</a></li>
+<!--                   <li><a ui-sref="pgHolder">Special Pkg for Pg Holders</a></li> -->
+<!--                   <li><a ui-sref="batchelor">Special Pkg for Batchelor's</a></li> -->
+<!--                   <li><a ui-sref="dietFood">Diet Food </a></li> -->
+
+                </ul>
+              </li>
+              <li><a ui-sref="about">About</a></li>
+              <li><a ui-sref="gallery">Gallery</a></li>
+              <li><a ui-sref="contact">Contact</a></li>
+              <li><a ui-sref="cartDetail"><span class="fa fa-shopping-cart cart-icon" aria-hidden="true"><button class='cart-icon-items' ng-show='itemsInCart>0'>{{itemsInCart}}</button></span></a></li>
+<!--               <li><a ui-sref="thankYou">Thank U</a></li> -->
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div ui-view>
     <!-- MAIN -->
+       <!-- MAIN -->
+    
     <main role="main">
-      <!-- Content -->
-      <article>
-        <header class="section background-primary text-center">
-            <h1 class="text-white margin-bottom-0 text-size-50 text-thin text-line-height-1">Thank You For Ordering <br> </br>from Us<br></br>Hope You will Enjoy food<br><span style="font-size: 30px;">Here is Your Oder Detail</span></h1>
-        </header>
-        <div class="section background-white"> 
-          <div class="line">
-            <div class="margin">
-              <table class="responstable">
-  
-  <tr>
-    <th>Main driver</th>
-    <th data-th="Driver details"><span>First name</span></th>
-    <th>Surname</th>
-    <th>Date of birth</th>
-    <th>Relationship</th>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Steve</td>
-    <td>Foo</td>
-    <td>01/01/1978</td>
-    <td>Policyholder</td>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Steffie</td>
-    <td>Foo</td>
-    <td>01/01/1978</td>
-    <td>Spouse</td>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Stan</td>
-    <td>Foo</td>
-    <td>01/01/1994</td>
-    <td>Son</td>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Stella</td>
-    <td>Foo</td>
-    <td>01/01/1992</td>
-    <td>Daughter</td>
-  </tr>
-  
-</table>
-               
-            </div>  
-          </div> 
-        </div> 
-      </article>
+      <!-- Main Carousel -->
+      <!-- Section 2 -->
+      <section class="section background-primary text-center">
+        <div class="line">
+          <div class="s-12 m-10 l-8 center">
+            <h2 class="headline text-thin text-s-size-30">Thank You for Odering From Us!</h2>
+            <p class="text-size-20">Hope You will like our food.</p>
+          </div>
+        </div>  
+      </section>
+      
+      <section class="section background-primary text-center">
+        <div class="line">
+          <div class="s-12 m-10 l-8 center">
+            <h2 class="headline text-thin text-s-size-30">Here Is Order Detail</h2>
+            <p class="text-size-20">To Be continuue..</p>
+          </div>
+        </div>  
+      </section>      
+     
+      
+    
+      
+    </main>.</p>
+          </div>
+        </div>  
+      </section>
+      
+      <!-- Section 1 -->
+     
+      
+     
+      
+    
+      
+    </main>
+    
+    </div>
+    
+    <!-- FOOTER -->
+    <footer>
+      <!-- Social -->
       <div class="background-primary padding text-center">
         <a href="/"><i class="icon-facebook_circle icon2x text-white"></i></a> 
         <a href="/"><i class="icon-twitter_circle icon2x text-white"></i></a>
         <a href="/"><i class="icon-google_plus_circle icon2x text-white"></i></a>
         <a href="/"><i class="icon-instagram_circle icon2x text-white"></i></a>                                                                        
       </div>
-      <!-- MAP -->
       
-    </main>
-    
-   
+      <!-- Main Footer -->
+       <section class="section background-dark">
+        <div class="line">
+          <div class="margin">
+            <!-- Collumn 1 -->
+            <div class="s-12 m-12 l-4 margin-m-bottom-2x">
+              <h4 class="text-uppercase text-strong" style="color: aliceblue;">What We Want To Deliver</h4>
+              <p class="text-size-20"><em>"29 States 29 Meal."</em><p>
+                            
+              <div class="line">
+                <h4 class="text-uppercase text-strong margin-top-30">About Us</h4>
+                <div class="margin">
+                  <div class="s-12 m-12 l-4 margin-m-bottom">
+                    <a class="image-hover-zoom" href="/"><img src="../img/blog-04.jpg" alt=""></a>
+                  </div>
+                  <div class="s-12 m-12 l-8 margin-m-bottom">
+                    <p>At ThekaDesiKhana we explore the parts of India to dug out treasures of taste and then serve you with pleasure. Also, forgot to mention that all this is available at the most affordable prices.</p>
+                    <a class="text-more-info text-primary-hover" href="http://thekadesikhana.tumblr.com/">Read more About Us</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Collumn 2 -->
+            <div class="s-12 m-12 l-4 margin-m-bottom-2x">
+              <h4 class="text-uppercase text-strong" style="color: aliceblue;">Contact Us</h4>
+              <div class="line">
+                <div class="s-1 m-1 l-1 text-center">
+                  <i class="icon-placepin text-primary text-size-12"></i>
+                </div>
+                <div class="s-11 m-11 l-11 margin-bottom-10">
+                  <p><b>Adress:</b> SGR dental College Road, Marathalli, Bangalore</p>
+                </div>
+              </div>
+              <div class="line">
+                <div class="s-1 m-1 l-1 text-center">
+                  <i class="icon-mail text-primary text-size-12"></i>
+                </div>
+                <div class="s-11 m-11 l-11 margin-bottom-10">
+                  <p><a href="/" class="text-primary-hover"><b>E-mail:</b> sales@thekadesikhana.com</a></p>
+                </div>
+              </div>
+              <div class="line">
+                <div class="s-1 m-1 l-1 text-center">
+                  <i class="icon-smartphone text-primary text-size-12"></i>
+                </div>
+                <div class="s-11 m-11 l-11 margin-bottom-10">
+                  <p><b>Phone:</b> +91-7348815961</p>
+                </div>
+              </div>
+              <div class="line">
+                <div class="s-1 m-1 l-1 text-center">
+                  <i class="icon-twitter text-primary text-size-12"></i>
+                </div>
+                <div class="s-11 m-11 l-11 margin-bottom-10">
+                  <p><a href="https://twitter.com/thekaDesiKhana" class="text-primary-hover"><b>Twitter</b></a></p>
+                </div>
+              </div>
+              <div class="line">
+                <div class="s-1 m-1 l-1 text-center">
+                  <i class="icon-facebook text-primary text-size-12"></i>
+                </div>
+                <div class="s-11 m-11 l-11">
+                  <p><a href="https://www.facebook.com/thekadesikhana/" class="text-primary-hover"><b>Facebook</b></a></p>
+                </div>
+              </div>
+              <div class="line">
+                <div class="s-1 m-1 l-1 text-center">
+                  <i class="icon-facebook text-primary text-size-12"></i>
+                </div>
+                <div class="s-11 m-11 l-11">
+                  <p><a href="https://www.google.com/maps/place/Theka+Desi+Khana/@12.9492672,77.7016835,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae124a6ffe2191:0xef7866298cc2d559!8m2!3d12.9492672!4d77.7038722" class="text-primary-hover"><b>Google+</b></a></p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Collumn 3 -->
+            <div class="s-12 m-12 l-4">
+              <h4 class="text-uppercase text-strong" style="color: aliceblue;">Leave a Message</h4>
+              <form class="customform text-white">
+                <div class="line">
+                  <div class="margin">
+                    <div class="s-12 m-12 l-6">
+                      <input name="email" class="required email border-radius" placeholder="Your e-mail" title="Your e-mail" type="text" />
+                    </div>
+                    <div class="s-12 m-12 l-6">
+                      <input name="name" class="name border-radius" placeholder="Your name" title="Your name" type="text" />
+                    </div>
+                  </div>
+                </div>
+                <div class="s-12">
+                  <textarea name="message" class="required message border-radius" placeholder="Your message" rows="3"></textarea>
+                </div>
+                <div class="s-12"><button class="submit-form button background-primary border-radius text-white" type="submit">Feed Us Back</button></div> 
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="break margin-top-bottom-0" style="border-color: rgba(0, 38, 51, 0.80);">
+      
+     
+      
+    </footer>
+     <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+     <script type="text/javascript" src="../js/responsee.js"></script>
+    <script type="text/javascript" src="../owl-carousel/owl.carousel.js"></script>
+     <script type="text/javascript" src="../js/template-scripts.js"></script>    
+     
+   </body>
+</html>

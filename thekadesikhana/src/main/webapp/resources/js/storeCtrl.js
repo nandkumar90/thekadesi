@@ -23,7 +23,7 @@ var storeModule=angular.module('storeModule',[])
       orderDetails.creditUrl='https://www.instamojo.com/nandkumar90/thekadesikhana/?data_amount='+$scope.cart.getTotalPrice()+'&data_email='+$scope.user.mail +'&data_name='+$scope.user.name+'&data_phone='+$scope.user.contact+'&data_readonly=data_amount  rel="im-checkout" data-behaviour="link" data-style="flat-dark" data-text="Checkout With Instamojo">Checkout</a>';
         console.log(JSON.stringify(orderDetails));
         $http.post('http://107.23.59.43:8787/thekadesi/weborder',orderDetails).then(function (response) {
-        	
+        	 $window.location.href=response.data.paymentUrl;
         },function(error)
         {
 
@@ -59,6 +59,24 @@ var storeModule=angular.module('storeModule',[])
     })
    
     updateCart();
+})
+
+.controller('thankYouCtrl',function($scope,DataService,$window){
+
+    console.log($window.location.href);
+    var paramValue = $location.search().payment_request_id;
+    console.log($location.search().payment_request_id); 
+    var orderDetailUrl='http://107.23.59.43:8787/thekadesi/order/'+paramValue;
+    console.log(JSON.stringify(orderDetails));
+    $http.get(orderDetailUrl).then(function (response) {
+    	 console.log(response);
+    },function(error)
+    {
+
+    })
+    
+    
+    
 })
 .factory("DataService", function () {
 
