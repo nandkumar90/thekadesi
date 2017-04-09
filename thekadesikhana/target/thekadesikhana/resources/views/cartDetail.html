@@ -1,0 +1,119 @@
+
+    
+    <main role="main">
+      <!-- Content -->
+      <article>
+        <header class="section background-primary text-center">
+            <h1 class="text-white margin-bottom-0 text-size-50 text-thin text-line-height-1">Order Details</h1>
+        </header>
+        <div class="section background-white"> 
+          <div class="line">
+            <div class="margin">
+              
+              <!-- Cart Information -->
+              <div class="s-12 m-12 l-6">
+                
+<table class="responstable">
+  
+   <!-- header -->
+                <tr class="well">
+                    <td><b>Item</b></td>
+                    <td class="tdCenter"><b>Quantity</b></td>
+                    <td class="tdRight"><b>Price</b></td>
+                    <td />
+                </tr>
+
+                <!-- empty cart message -->
+                <tr ng-hide="cart.getTotalCount() > 0" >
+                    <td class="tdCenter" colspan="4">
+                        Your cart is empty.
+                    </td>
+                </tr>
+
+                <!-- cart items -->
+                <tr ng-repeat="item in cart.items track by $index | orderBy:'name'">
+                    <td>{{item.name}}/{{item.type}}</td>
+                    <td class="tdCenter">
+                      <div class="input-append">
+                        <!-- use type=tel instead of  to prevent spinners -->
+                        <input
+                            class="span3 text-center" type="tel" 
+                            ng-model="item.quantity" 
+                            ng-change="cart.saveItems()" />
+                        <button 
+                            class="btn btn-success" type="button" 
+                            ng-disabled="item.quantity >= 1000"
+                            ng-click="cart.addItem(item.sku, item.name, item.price, +1,item.type);$emit('updateCart');">+</button>
+                        <button 
+                            class="btn btn-inverse" type="button" 
+                            ng-disabled="item.quantity < 1"
+                            ng-click="cart.addItem(item.sku, item.name, item.price, -1,item.type);$emit('updateCart');">-</button>
+                      </div>
+                    </td>
+                    <td class="tdRight">{{item.price * item.quantity | currency:'&#8377;'}}</td>
+                    <td class="tdCenter" title="remove from cart">
+                        <a href="" ng-click="cart.addItem(item.sku, item.name, item.price, -10000000)" >
+                            <i class="icon-remove" />
+                        </a>
+                    </td>
+                </tr>
+
+                <!-- footer -->
+                <tr class="well">
+                    <td><b>Total</b></td>
+                    <td class="tdCenter"><b>{{cart.getTotalCount()}}</b></td>
+                    <td class="tdRight"><b>{{cart.getTotalPrice() | currency:'&#8377;'}}</b></td>
+                    <td />
+                </tr>
+  
+</table>
+ <div class="s-12 m-12 l-6">
+              <h3> Payment Type</h3>
+              <input  type="radio" ng-model="paymentMethod" value="online" /><label class="custom-label">Online</label>
+             <input  type="radio" ng-model="paymentMethod" value="cash On Delivery"/><label class="custom-label">Cash On Delivery</label>
+              
+              </div>
+              </div>
+              
+             
+             
+              
+              <!-- Contact Form -->
+              <div class="s-12 m-12 l-6">
+                <h2 class="text-uppercase text-strong margin-bottom-30">Delivery Address</h2>
+                <form class="customform" name="orderForm" ng-submit="submitted=true; orderForm.$valid && placeOrder()" novalidate>
+                  <div class="line">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-6" >
+                        <input ng-class="{'has-error':orderForm.email.$invalid && submitted}" ng-model="user.mail"name="email" class="required email border-radius" placeholder="Your e-mail" title="Your e-mail" type="email" ng-required=true />
+                        <span style="position:absolute; bottom:2px;color:red ;font-size: 12px;" ng-show="orderForm.contact.$error.email">Please Enter a valid Email ID</span>
+                     
+                      </div>
+                      <div class="s-12 m-12 l-6" >
+                        <input  ng-class="{'has-error':orderForm.name.$invalid && submitted}" ng-model="user.name" name="name" class="name border-radius" placeholder="Your name" title="Your name" type="text" ng-required=true />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-12" style="position:relative;"> 
+                    <input only-digits ng-class="{'has-error':orderForm.contact.$invalid && submitted}" ng-model="user.contact" ng-maxlength="10" ng-minlength="10" name="contact" class="subject border-radius" placeholder="Phone No" title="Mobile No" type="text" ng-required=true />
+                     <span style="position:absolute; bottom:2px;color:red ;font-size: 12px;" ng-show="orderForm.contact.$error.maxlength || orderForm.contact.$error.minlength">Please Enter 10 digits Mobile Number</span>
+                  </div>
+                  <div class="s-12" >
+                    <textarea ng-class="{'has-error':orderForm.address.$invalid && submitted}" ng-model="user.address" name="address" class="required message border-radius" placeholder="Your Address" rows="3" ng-required=true ></textarea>
+                  </div>
+                  <div class="s-12 m-12 l-4"><button class="submit-form button background-primary border-radius text-white" type="submit" ng-disabled="cart.getTotalCount() <= 0 ">Place Ur Order</button></div> 
+                </form>
+              </div>  
+            </div>  
+          </div> 
+        </div> 
+      </article>
+      <div class="background-primary padding text-center">
+        <a href="/"><i class="icon-facebook_circle icon2x text-white"></i></a> 
+        <a href="/"><i class="icon-twitter_circle icon2x text-white"></i></a>
+        <a href="/"><i class="icon-google_plus_circle icon2x text-white"></i></a>
+        <a href="/"><i class="icon-instagram_circle icon2x text-white"></i></a>                                                                        
+      </div>
+      <!-- MAP -->
+     
+    </main>
