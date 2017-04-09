@@ -64,15 +64,15 @@ var storeModule=angular.module('storeModule',[])
 .controller('thankYouCtrl',function($scope,DataService,$window){
 
     console.log($window.location.href);
-    var paramValue = $location.search().payment_request_id;
-    console.log($location.search().payment_request_id); 
-    var orderDetailUrl='http://107.23.59.43:8787/thekadesi/order/'+paramValue;
+    var paramValue = $location.search(payment_request_id);
+    console.log($location.search(payment_request_id)); 
+    var orderDetailUrl='http://107.23.59.43:8787/thekadesi/gateway/order/'+paramValue;
     console.log(JSON.stringify(orderDetails));
     $http.get(orderDetailUrl).then(function (response) {
     	 console.log(response);
     },function(error)
     {
-
+    	console.log(error);
     })
     
     
